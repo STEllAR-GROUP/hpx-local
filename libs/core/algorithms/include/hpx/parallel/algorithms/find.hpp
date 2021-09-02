@@ -373,7 +373,7 @@ namespace hpx {
 
 #else    // DOXYGEN
 
-#include <hpx/config.hpp>
+#include <hpx/local/config.hpp>
 #include <hpx/concepts/concepts.hpp>
 #include <hpx/functional/invoke.hpp>
 #include <hpx/iterator_support/traits/is_iterator.hpp>
@@ -488,8 +488,8 @@ namespace hpx { namespace parallel { inline namespace v1 {
             hpx::traits::is_iterator<FwdIter>::value
         )>
     // clang-format on
-    HPX_DEPRECATED_V(
-        1, 6, "hpx::parallel::find is deprecated, use hpx::find instead")
+    HPX_LOCAL_DEPRECATED_V(
+        0, 1, "hpx::parallel::find is deprecated, use hpx::find instead")
         typename util::detail::algorithm_result<ExPolicy, FwdIter>::type
         find(ExPolicy&& policy, FwdIter first, FwdIter last, T const& val)
     {
@@ -595,8 +595,8 @@ namespace hpx { namespace parallel { inline namespace v1 {
             >
         )>
     // clang-format on
-    HPX_DEPRECATED_V(
-        1, 6, "hpx::parallel::find_if is deprecated, use hpx::find_If instead")
+    HPX_LOCAL_DEPRECATED_V(
+        0, 1, "hpx::parallel::find_if is deprecated, use hpx::find_If instead")
         typename util::detail::algorithm_result<ExPolicy, FwdIter>::type
         find_if(ExPolicy&& policy, FwdIter first, FwdIter last, F&& f)
     {
@@ -705,7 +705,7 @@ namespace hpx { namespace parallel { inline namespace v1 {
             >
         )>
     // clang-format on
-    HPX_DEPRECATED_V(1, 6,
+    HPX_LOCAL_DEPRECATED_V(0, 1,
         "hpx::parallel::find_if_not is deprecated, use hpx::find_if_not "
         "instead")
         typename util::detail::algorithm_result<ExPolicy, FwdIter>::type
@@ -912,7 +912,7 @@ namespace hpx { namespace parallel { inline namespace v1 {
             hpx::traits::is_iterator<FwdIter2>::value
         )>
     // clang-format on
-    HPX_DEPRECATED_V(1, 6,
+    HPX_LOCAL_DEPRECATED_V(0, 1,
         "hpx::parallel::find_end is deprecated, use hpx::find_end instead")
         typename util::detail::algorithm_result<ExPolicy, FwdIter1>::type
         find_end(ExPolicy&& policy, FwdIter1 first1, FwdIter1 last1,
@@ -1064,7 +1064,7 @@ namespace hpx { namespace parallel { inline namespace v1 {
             hpx::traits::is_iterator<FwdIter2>::value
         )>
     // clang-format on
-    HPX_DEPRECATED_V(1, 6,
+    HPX_LOCAL_DEPRECATED_V(0, 1,
         "hpx::parallel::find_first_of is deprecated, use hpx::find_first_of "
         "instead")
         typename util::detail::algorithm_result<ExPolicy, FwdIter1>::type

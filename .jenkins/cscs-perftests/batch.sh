@@ -49,7 +49,7 @@ configure_build_errors=0
 test_errors=0
 plot_errors=0
 
-hpx_targets=("future_overhead_report_test" "stream_report_test")
+hpx_targets=("future_overhead_local_report_test" "stream_local_report_test")
 hpx_test_options=("--hpx:queuing=local-priority --hpx:threads=4 --test-all \
     --repetitions=100 --futures=500000" \
     "--vector_size=1048576 --hpx:threads=4 --iterations=5000 \

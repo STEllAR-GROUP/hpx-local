@@ -24,9 +24,9 @@ perftests_dir=${build_dir}/tools/perftests_ci
 mkdir -p ${build_dir}/reports
 logfile=log_perftest_plot.tmp
 
-hpx_targets=("future_overhead_report_test" "stream_report_test")
+hpx_targets=("future_overhead_local_report_test" "stream_local_report_test")
 hpx_test_options=("--hpx:queuing=local-priority --hpx:threads=4 --test-all \
-    --repetitions=100 --futures=500000" \
+    --repetitions=100 --futures=500000"
     "--vector_size=1048576 --hpx:threads=4 --iterations=5000 \
     --warmup_iterations=500")
 
@@ -38,8 +38,7 @@ ${perftests_dir}/driver.py -v -l $logfile build -b release -o build \
 index=0
 result_files=""
 # Run and compare for each targets specified
-for executable in "${hpx_targets[@]}"
-do
+for executable in "${hpx_targets[@]}"; do
     test_opts=${hpx_test_options[$index]}
     result=${build_dir}/reports/${executable}.json
     reference=${perftests_dir}/perftest/references/daint_default/${executable}.json
@@ -51,9 +50,9 @@ do
 
     # Run
     ${perftests_dir}/driver.py -v -l $logfile_tmp perftest run --local True \
-    --run_output $result --targets-and-opts "${run_command[@]}"
+        --run_output $result --targets-and-opts "${run_command[@]}"
 
-    index=$((index+1))
+    index=$((index + 1))
 done
 
 # Plot
