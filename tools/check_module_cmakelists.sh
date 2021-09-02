@@ -73,7 +73,7 @@ function check_cmakelists_files() {
 # Enable globbing
 shopt -s globstar
 
-# HPX source directory
+# HPXLocal source directory
 source_dir=/hpx/source
 # Where to write the dependencies output files
 output_dir=/tmp
