@@ -12,7 +12,7 @@ foreach(benchmark ${benchmarks})
 
   source_group("Source Files" FILES ${sources})
 
-  set(folder_name "Benchmarks/Modules/Core/Serialization")
+  set(folder_name "Benchmarks/Modules/Local/Serialization")
 
   # add example executable
   hpx_local_add_executable(

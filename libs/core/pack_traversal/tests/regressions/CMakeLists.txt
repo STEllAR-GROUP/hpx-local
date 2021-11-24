@@ -16,7 +16,7 @@ foreach(test ${tests})
     ${test}_test INTERNAL_FLAGS
     SOURCES ${sources} ${${test}_FLAGS}
     EXCLUDE_FROM_ALL
-    FOLDER "Tests/Regressions/Modules/Core/PackTraversal"
+    FOLDER "Tests/Regressions/Modules/Local/PackTraversal"
   )
 
   hpx_local_add_regression_test(
@@ -36,7 +36,7 @@ if(HPXLocal_WITH_COMPILE_ONLY_TESTS)
     hpx_local_add_regression_compile_test(
       "modules.pack_traversal" ${compile_test}
       SOURCES ${sources} ${${compile_test}_FLAGS}
-      FOLDER "Tests/Regressions/Modules/Core/PackTraversal/CompileOnly"
+      FOLDER "Tests/Regressions/Modules/Local/PackTraversal/CompileOnly"
     )
   endforeach()
 endif()

@@ -30,7 +30,7 @@ foreach(test ${tests})
     SOURCES ${sources} ${${test}_FLAGS}
     EXCLUDE_FROM_ALL
     HPX_PREFIX ${HPX_BUILD_PREFIX}
-    FOLDER "Tests/Regressions/Modules/Core/Futures"
+    FOLDER "Tests/Regressions/Modules/Local/Futures"
   )
 
   hpx_local_add_regression_test("modules.futures" ${test} ${${test}_PARAMETERS})
@@ -57,7 +57,7 @@ if(HPXLocal_WITH_COMPILE_ONLY_TESTS)
     hpx_local_add_regression_compile_test(
       "modules.futures" ${compile_test}
       SOURCES ${sources} ${${compile_test}_FLAGS}
-      FOLDER "Tests/Regressions/Modules/Core/Futures/CompileOnly"
+      FOLDER "Tests/Regressions/Modules/Local/Futures/CompileOnly"
     )
   endforeach()
 endif()

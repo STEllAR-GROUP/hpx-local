@@ -20,7 +20,7 @@ foreach(test ${tests})
     DEPENDENCIES hpx_config_registry
     EXCLUDE_FROM_ALL
     HPX_PREFIX ${HPX_BUILD_PREFIX}
-    FOLDER "Tests/Unit/Modules/Core/ConfigRegistry"
+    FOLDER "Tests/Unit/Modules/Local/ConfigRegistry"
   )
 
   hpx_local_add_unit_test(

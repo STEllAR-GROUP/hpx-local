@@ -43,7 +43,7 @@ foreach(test ${tests})
     SOURCES ${sources} ${${test}_FLAGS}
     EXCLUDE_FROM_ALL
     HPX_PREFIX ${HPX_BUILD_PREFIX}
-    FOLDER "Tests/Unit/Modules/Core/Algorithms/Datapar"
+    FOLDER "Tests/Unit/Modules/Local/Algorithms/Datapar"
   )
 
   hpx_local_add_unit_test("modules.algorithms" ${test} ${${test}_PARAMETERS})

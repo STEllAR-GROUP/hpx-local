@@ -61,14 +61,14 @@ set(CONFIG_STRINGS_MODULES_ENTRIES)
 string(TOUPPER local uppercase_lib)
 add_library(hpx_local SHARED src/dummy.cpp)
 target_compile_definitions(hpx_local PRIVATE HPX_LOCAL_EXPORTS)
-set_target_properties(hpx_local PROPERTIES FOLDER "Local")
+set_target_properties(hpx_local PROPERTIES FOLDER "Core")
 set_target_properties(
   hpx_local
   PROPERTIES VERSION ${HPXLocal_VERSION}
              SOVERSION ${HPXLocal_SOVERSION}
              CLEAN_DIRECT_OUTPUT 1
              OUTPUT_NAME hpx_local
-             FOLDER "Local"
+             FOLDER "Core"
 )
 install(
   TARGETS hpx_local

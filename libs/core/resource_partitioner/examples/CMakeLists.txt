@@ -53,7 +53,7 @@ foreach(example_program ${example_programs})
   hpx_local_add_executable(
     ${example_program} INTERNAL_FLAGS
     SOURCES ${sources} ${${example_program}_FLAGS}
-    FOLDER "Examples/Modules/Core/ResourcePartitioner"
+    FOLDER "Examples/Modules/Local/ResourcePartitioner"
   )
 
   if(MSVC)

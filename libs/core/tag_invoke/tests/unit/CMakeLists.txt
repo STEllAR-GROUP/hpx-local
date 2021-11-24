@@ -18,7 +18,7 @@ foreach(test ${function_tests})
     NOLIBS
     DEPENDENCIES hpx_local
     EXCLUDE_FROM_ALL
-    FOLDER "Tests/Unit/Modules/Core/TagInvoke"
+    FOLDER "Tests/Unit/Modules/Local/TagInvoke"
   )
 
   hpx_local_add_unit_test("modules.tag_invoke" ${test})

@@ -15,7 +15,7 @@ foreach(test ${tests})
 
   source_group("Source Files" FILES ${sources})
 
-  set(folder_name "Tests/Unit/Modules/Core/Datastructures")
+  set(folder_name "Tests/Unit/Modules/Local/Datastructures")
 
   # add example executable
   hpx_local_add_executable(

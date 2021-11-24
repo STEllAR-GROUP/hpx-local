@@ -18,7 +18,7 @@ foreach(test ${function_tests})
     NOLIBS
     DEPENDENCIES hpx_local
     EXCLUDE_FROM_ALL
-    FOLDER "Tests/Regressions/Modules/Core/Functional"
+    FOLDER "Tests/Regressions/Modules/Local/Functional"
   )
 
   hpx_local_add_regression_test(

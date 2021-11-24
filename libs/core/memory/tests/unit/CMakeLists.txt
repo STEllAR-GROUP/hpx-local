@@ -25,7 +25,7 @@ foreach(test ${tests})
     SOURCES ${sources} ${${test}_FLAGS}
     EXCLUDE_FROM_ALL NOLIBS
     DEPENDENCIES hpx_local
-    FOLDER "Tests/Unit/Modules/Core/Memory"
+    FOLDER "Tests/Unit/Modules/Local/Memory"
   )
 
   hpx_local_add_unit_test("modules.memory" ${test} ${${test}_PARAMETERS})

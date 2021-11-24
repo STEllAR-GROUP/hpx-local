@@ -15,7 +15,7 @@ foreach(test ${tests})
 
   source_group("Source Files" FILES ${sources})
 
-  set(folder_name "Tests/Regressions/Modules/Core/ProgramOptions")
+  set(folder_name "Tests/Regressions/Modules/Local/ProgramOptions")
 
   # add example executable
   hpx_local_add_executable(

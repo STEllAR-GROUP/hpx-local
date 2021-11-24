@@ -11,7 +11,7 @@ foreach(test ${tests})
 
   source_group("Source Files" FILES ${sources})
 
-  set(folder_name "Tests/Regressions/Modules/Core/ThreadingBase")
+  set(folder_name "Tests/Regressions/Modules/Local/ThreadingBase")
 
   # add example executable
   hpx_local_add_executable(

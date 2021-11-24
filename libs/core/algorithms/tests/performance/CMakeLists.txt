@@ -35,7 +35,7 @@ foreach(benchmark ${benchmarks})
     ${benchmark}_test INTERNAL_FLAGS
     SOURCES ${sources}
     EXCLUDE_FROM_ALL ${${benchmark}_FLAGS}
-    FOLDER "Benchmarks/Modules/Core/Algorithms"
+    FOLDER "Benchmarks/Modules/Local/Algorithms"
   )
 
   hpx_local_add_performance_test(

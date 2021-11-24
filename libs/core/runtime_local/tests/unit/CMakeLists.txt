@@ -19,7 +19,7 @@ foreach(test ${tests})
     SOURCES ${sources}
     EXCLUDE_FROM_ALL
     HPX_PREFIX ${HPX_BUILD_PREFIX}
-    FOLDER "Tests/Unit/Modules/Core/RuntimeLocal"
+    FOLDER "Tests/Unit/Modules/Local/RuntimeLocal"
   )
 
   hpx_local_add_unit_test("modules.runtime_local" ${test} ${${test}_PARAMETERS})

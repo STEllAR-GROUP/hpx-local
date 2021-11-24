@@ -21,7 +21,7 @@ foreach(test ${tests})
     NOLIBS
     DEPENDENCIES hpx_local ${BOOST_UNDERLYING_THREAD_LIBRARY}
     EXCLUDE_FROM_ALL
-    FOLDER "Tests/Unit/Modules/Core/ExecutionBase"
+    FOLDER "Tests/Unit/Modules/Local/ExecutionBase"
   )
 
   hpx_local_add_unit_test(

@@ -39,7 +39,7 @@ foreach(test ${tests})
     ${test}_test INTERNAL_FLAGS
     SOURCES ${sources}
     EXCLUDE_FROM_ALL ${${test}_FLAGS}
-    FOLDER "Tests/Regressions/Modules/Core/Algorithms/"
+    FOLDER "Tests/Regressions/Modules/Local/Algorithms/"
   )
 
   target_link_libraries(

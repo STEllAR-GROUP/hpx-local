@@ -23,7 +23,7 @@ foreach(benchmark ${benchmarks})
     SOURCES ${sources}
     EXCLUDE_FROM_ALL ${${benchmark}_FLAGS}
     DEPENDENCIES hpx_async_cuda ${${benchmark}_FLAGS}
-    FOLDER "Benchmarks/Modules/Core/AsyncCuda"
+    FOLDER "Benchmarks/Modules/Local/AsyncCuda"
   )
 
   # add a custom target for this benchmark

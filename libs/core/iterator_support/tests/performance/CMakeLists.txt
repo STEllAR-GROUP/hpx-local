@@ -16,7 +16,7 @@ foreach(benchmark ${benchmarks})
     ${benchmark}_test INTERNAL_FLAGS
     SOURCES ${sources}
     EXCLUDE_FROM_ALL ${${benchmark}_FLAGS}
-    FOLDER "Benchmarks/Modules/Core/IteratorSupport"
+    FOLDER "Benchmarks/Modules/Local/IteratorSupport"
   )
 
   hpx_local_add_performance_test(

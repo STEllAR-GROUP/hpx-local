@@ -17,7 +17,7 @@ foreach(test ${tests})
     NOLIBS
     DEPENDENCIES hpx_local
     EXCLUDE_FROM_ALL
-    FOLDER "Tests/Unit/Modules/Core/Assertion/"
+    FOLDER "Tests/Unit/Modules/Local/Assertion/"
   )
 
   hpx_local_add_unit_test("modules.assertion" ${test} ${${test}_PARAMETERS})

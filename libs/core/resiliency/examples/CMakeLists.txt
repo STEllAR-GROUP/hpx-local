@@ -39,7 +39,7 @@ if(HPXLocal_WITH_EXAMPLES)
     hpx_local_add_executable(
       ${example_program} INTERNAL_FLAGS
       SOURCES ${sources} ${${example_program}_FLAGS}
-      FOLDER "Examples/Modules/Core/Resiliency"
+      FOLDER "Examples/Modules/Local/Resiliency"
     )
 
     hpx_local_add_example_target_dependencies(

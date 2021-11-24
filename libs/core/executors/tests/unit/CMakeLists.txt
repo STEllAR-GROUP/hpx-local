@@ -33,7 +33,7 @@ foreach(test ${tests})
 
   source_group("Source Files" FILES ${sources})
 
-  set(folder_name "Tests/Unit/Modules/Core/Executors")
+  set(folder_name "Tests/Unit/Modules/Local/Executors")
 
   # add example executable
   hpx_local_add_executable(

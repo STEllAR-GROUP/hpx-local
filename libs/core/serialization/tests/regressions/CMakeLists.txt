@@ -11,7 +11,7 @@ foreach(test ${tests})
 
   source_group("Source Files" FILES ${sources})
 
-  set(folder_name "Tests/Regressions/Modules/Core/Serialization")
+  set(folder_name "Tests/Regressions/Modules/Local/Serialization")
 
   # add example executable
   hpx_local_add_executable(
@@ -49,7 +49,7 @@ if(HPXLocal_WITH_COMPILE_ONLY_TESTS)
     hpx_local_add_regression_compile_test(
       "modules.serialization" ${compile_test}
       SOURCES ${sources} ${${compile_test}_FLAGS}
-      FOLDER "Tests/Regressions/Modules/Core/Serialization/CompileOnly"
+      FOLDER "Tests/Regressions/Modules/Local/Serialization/CompileOnly"
     )
 
   endforeach()

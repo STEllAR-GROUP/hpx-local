@@ -51,7 +51,7 @@ foreach(test ${function_tests})
     NOLIBS
     DEPENDENCIES hpx_local
     EXCLUDE_FROM_ALL
-    FOLDER "Tests/Unit/Modules/Core/Functional"
+    FOLDER "Tests/Unit/Modules/Local/Functional"
   )
 
   hpx_local_add_unit_test("modules.functional" ${test})

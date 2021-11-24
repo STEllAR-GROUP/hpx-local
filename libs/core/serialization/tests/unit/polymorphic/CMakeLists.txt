@@ -26,7 +26,7 @@ foreach(test ${tests})
     SOURCES ${sources} ${${test}_FLAGS}
     EXCLUDE_FROM_ALL NOLIBS
     DEPENDENCIES hpx_local
-    FOLDER "Tests/Unit/Modules/Core/Serialization/Polymorphic"
+    FOLDER "Tests/Unit/Modules/Local/Serialization/Polymorphic"
   )
 
   hpx_local_add_unit_test("modules.serialization" ${test} ${${test}_PARAMETERS})
