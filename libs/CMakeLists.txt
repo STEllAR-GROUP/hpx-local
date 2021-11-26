@@ -58,10 +58,18 @@ set(MODULE_ENABLED_MODULE_DEFINES)
 set(CONFIG_STRINGS_MODULES_INCLUDES)
 set(CONFIG_STRINGS_MODULES_ENTRIES)
 
+if(MSVC AND MSVC14)
+  # add natvis files to solution
+  hpx_local_add_library_sources(
+    hpx_natvis_files GLOB GLOBS "${PROJECT_SOURCE_DIR}/tools/VS/*.natvis"
+  )
+  source_group("Natvis Files" FILES ${hpx_natvis_files_SOURCES})
+endif()
+
 string(TOUPPER local uppercase_lib)
-add_library(hpx_local SHARED src/dummy.cpp)
+add_library(hpx_local SHARED src/dummy.cpp ${hpx_natvis_files_SOURCES})
 target_compile_definitions(hpx_local PRIVATE HPX_LOCAL_EXPORTS)
-set_target_properties(hpx_local PROPERTIES FOLDER "Core")
+
 set_target_properties(
   hpx_local
   PROPERTIES VERSION ${HPXLocal_VERSION}
