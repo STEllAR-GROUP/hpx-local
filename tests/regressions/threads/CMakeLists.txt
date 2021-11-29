@@ -34,7 +34,7 @@ foreach(test ${tests})
     SOURCES ${sources} ${${test}_FLAGS}
     EXCLUDE_FROM_ALL
     HPX_PREFIX ${HPX_BUILD_PREFIX}
-    FOLDER "Tests/Regressions/Threads"
+    FOLDER "Tests/Regressions/Local/Threads"
   )
 
   hpx_local_add_regression_test("threads" ${test} ${${test}_PARAMETERS})

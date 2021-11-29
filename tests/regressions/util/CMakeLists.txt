@@ -18,7 +18,7 @@ foreach(test ${tests})
     SOURCES ${sources} ${${test}_FLAGS}
     EXCLUDE_FROM_ALL
     HPX_PREFIX ${HPX_BUILD_PREFIX}
-    FOLDER "Tests/Regressions/Util"
+    FOLDER "Tests/Regressions/Local/Util"
   )
 
   hpx_local_add_regression_test("util" ${test} ${${test}_PARAMETERS})

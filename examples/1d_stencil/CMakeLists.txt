@@ -29,7 +29,7 @@ foreach(example_program ${example_programs})
   hpx_local_add_executable(
     ${example_program} INTERNAL_FLAGS
     SOURCES ${sources} ${${example_program}_FLAGS}
-    FOLDER "Examples/1D Stencil/${example_program}"
+    FOLDER "Examples/Local/1D Stencil"
   )
 
   hpx_local_add_example_target_dependencies("1d_stencil" ${example_program})

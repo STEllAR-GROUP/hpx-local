@@ -22,7 +22,7 @@ foreach(test ${tests})
     SOURCES ${sources} ${${test}_FLAGS}
     EXCLUDE_FROM_ALL
     HPX_PREFIX ${HPX_BUILD_PREFIX}
-    FOLDER "Tests/Unit/Util/"
+    FOLDER "Tests/Unit/Local/Util/"
   )
 
   hpx_local_add_unit_test("util" ${test} ${${test}_PARAMETERS})

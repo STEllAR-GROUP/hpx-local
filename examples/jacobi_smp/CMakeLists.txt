@@ -47,7 +47,7 @@ foreach(jacobi_smp_application ${jacobi_smp_applications})
   hpx_local_add_executable(
     ${jacobi_smp_application} INTERNAL_FLAGS MODULE jacobi_smp
     SOURCES ${sources} ${${jacobi_smp_application}_FLAGS}
-    FOLDER "Examples/JacobiSMP"
+    FOLDER "Examples/Local/JacobiSMP"
   )
 
   hpx_local_add_example_target_dependencies(

@@ -15,7 +15,7 @@ if(HPXLocal_WITH_EXAMPLES)
 endif()
 
 # add test pseudo targets needed for modules
-hpx_local_warn("HPXLocal_WITH_TESTS=${HPXLocal_WITH_TESTS}")
+# hpx_local_warn("HPXLocal_WITH_TESTS=${HPXLocal_WITH_TESTS}")
 if(HPXLocal_WITH_TESTS)
   if(HPXLocal_WITH_TESTS_UNIT)
     hpx_local_add_pseudo_target(tests.unit.modules)

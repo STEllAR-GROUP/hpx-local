@@ -18,7 +18,7 @@ foreach(example_program ${example_programs})
   hpx_local_add_executable(
     ${example_program} INTERNAL_FLAGS
     SOURCES ${sources} ${${example_program}_FLAGS}
-    FOLDER "Examples/Balancing/${example_program}"
+    FOLDER "Examples/Local/Balancing"
   )
 
   hpx_local_add_example_target_dependencies("balancing" ${example_program})

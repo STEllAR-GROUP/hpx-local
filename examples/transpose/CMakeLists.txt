@@ -24,7 +24,7 @@ foreach(example_program ${example_programs})
   hpx_local_add_executable(
     ${example_program} INTERNAL_FLAGS
     SOURCES ${sources} ${${example_program}_FLAGS}
-    FOLDER "Examples/Transpose"
+    FOLDER "Examples/Local/Transpose"
   )
 
   hpx_local_add_example_target_dependencies("transpose" ${example_program})
