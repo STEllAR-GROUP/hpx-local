@@ -1,0 +1,31 @@
+#  Copyright (c) 2021 ETH Zurich
+#
+#  SPDX-License-Identifier: BSL-1.0
+#  Distributed under the Boost Software License, Version 1.0. (See accompanying
+#  file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
+
+include:
+    - remote: "https://gitlab.com/cscs-ci/recipes/-/raw/master/templates/v2/.cscs.yml"
+
+stages:
+    - build_and_test
+
+build_and_test:
+    extends: .daint
+    stage: build_and_test
+    variables:
+        PULL_IMAGE: "YES"
+        CSCS_REGISTRY_LOGIN: "NO"
+        SLURM_TIMELIMIT: '60:00'
+        USE_MPI: "NO"
+        SLURM_CONSTRAINT: "mc"
+        SLURM_PARTITION: "normal"
+        SLURM_JOB_NUM_NODES: 1
+        SLURM_NTASKS: 1
+    image: index.docker.io/stellargroup/build_env
+    script:
+        - env
+        - mkdir -p build && cd build
+        - cmake -GNinja -DCMAKE_BUILD_TYPE=Debug -DHPXLocal_WITH_TESTS=ON -DHPXLocal_WITH_EXAMPLES=ON ..
+        - ninja -k0 all tests
+        - ctest --output-on-failure
