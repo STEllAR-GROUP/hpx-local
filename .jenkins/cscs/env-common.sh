@@ -17,6 +17,7 @@ export CCACHE_MAXSIZE=100G
 export CCACHE_MAXFILES=50000
 
 configure_extra_options+=" -DCMAKE_BUILD_TYPE=${build_type}"
+configure_extra_options+=" -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=OFF"
 configure_extra_options+=" -DHPXLocal_WITH_CHECK_MODULE_DEPENDENCIES=ON"
 configure_extra_options+=" -DHPXLocal_WITH_EXAMPLES=ON"
 configure_extra_options+=" -DHPXLocal_WITH_TESTS=ON"
